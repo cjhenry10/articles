@@ -4,21 +4,43 @@ date: '2023-05-09'
 tags: ['nextjs', 'next.js']
 ---
 
-### code block component test
-
-<Codeblock language="javascript" code={`let num = 0;
-if (num > 1) return true;`} fileName='index.js' />
-
-<Codeblock language="html" code={`<div>
-  <h1>Hello there</h1>
-</div>`} fileName='index.html' />
-
-<Codeblock language="css" code={`h1 {
+### pretty-code plus file header test
+<Codeblock fileName='testing.js' code={`let one = 1;
+let two = 'two';
+let three = 3;
+let four = 2 + 2;
+let five = 7 - 2;`}>
+```js /two/
+let one = 1;
+let two = 'two';
+let three = 3;
+let four = 2 + 2;
+let five = 7 - 2;
+```
+</Codeblock>
+<Codeblock fileName='style.css' code={`h1 {
   color: white;
   background-color: black;
-}`} fileName='style.css' />
+}`}>
+```css
+h1 {
+  color: white;
+  background-color: black;
+}
+```
+</Codeblock>
+<Codeblock fileName='index.html' code={`<div>
+  <h1>Hello there</h1>
+</div>`}>
+```html
+<div>
+  <h1>Hello there</h1>
+</div>
+```
+</Codeblock>
 
-### pretty-code
+
+### pretty-code code block
 ```js /two/
 let one = 1;
 let two = 'two';
@@ -26,16 +48,6 @@ let three = 3;
 let four = 2 + 2;
 let five = 7 - 2;
 ```
-### pretty-code plus file header test
-<CodeblockAlt fileName='testing.js'>
-```js /two/
-let one = 1;
-let two = 'two';
-let three = 3;
-let four = 2 + 2;
-let five = 7 - 2;
-```
-</CodeblockAlt>
 
 ### table test
 
@@ -43,6 +55,13 @@ let five = 7 - 2;
 | --- | ----------- |
 | Header | Title |
 | Paragraph | Text |
+
+---
+
+|Goal | Method |
+| --- | ----- |
+| Create an HTML element | `document.createElement('div');{:js}` |
+| Get an HTML element | `document.getElementById('your-element-id');{:js}` |
 
 ### link test
 
