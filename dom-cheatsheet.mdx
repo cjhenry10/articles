@@ -25,27 +25,22 @@ The DOM, or Document Object Model, provides methods to add, change, and remove H
 | Adjust the inner HTML | `yourHtmlElement.innerHTML = 'Your new text';{:js}` |
 
 # Create an HTML Element
-- code
-  - `document.createElement(placeholder);{:js}`
-- placeholder
-  - replace with an HTML tag as a string, such as `'div'{:js}`, `'img'{:js}`, or `'section'{:js}`
+#### code
+- `document.createElement(placeholder);{:js}`
+#### placeholder
+- replace with an HTML tag as a string, such as `'div'{:js}`, `'img'{:js}`, or `'section'{:js}`
 
 ### Examples
-The code below creates a new `div{:js}` element and stores it in a variable named `newElement{:js}`. The element is not on the page yet.
-<Codeblock fileName='script.js' code={`const newElement = document.createElement('div');
-`}>
-```js
+The code below creates a new `<div>{:html}` element and stores it in a variable named `newElement{:js}`. The element is not on the page yet.
+```js title="script.js"
 const newElement = document.createElement('div');
 ```
-</Codeblock>
 
-The code below creates a new `p{:js}` element and stores it in a variable named `newParagraph{:js}`. The element is not on the page yet.
-<Codeblock fileName='script.js' code={`const newElement = document.createElement('div');
-`}>
-```js
+The code below creates a new `<p>{:html}` element and stores it in a variable named `newParagraph{:js}`. The element is not on the page yet.
+```js title="script.js"
 const newParagraph = document.createElement('p');
 ```
-</Codeblock>
+
 
 # Select an HTML element
 - code
@@ -55,22 +50,13 @@ const newParagraph = document.createElement('p');
 
 ### Examples
 The code below is part of the HTML file.
-<Codeblock fileName='index.html' code={`<body>
-  <div id="about-section">
-  
-  </div>
-</body>`}>
-```html
+```html title="index.html" {3}
 <body>
-  <div id="about-section">
-
-  </div>
+  <h1>Hello</h1>
+  <div id="about-section"></div>
 </body>
 ```
-</Codeblock>
 The code below selects this `div` element and stores it in a variable named `about`.
-<Codeblock fileName='script.js' code={`const about = document.getElementById('about-section');`}>
-```js
+```js title="script.js"
 const about = document.getElementById('about-section');
 ```
-</Codeblock>
