@@ -10,23 +10,10 @@ The DOM, or Document Object Model, provides methods to add, change, and remove H
 Each section will first show the code with the word placeholder, followed by examples of what can replace the placeholder. 
 Next, there will be examples of how to use this method. This will usually involve using a variable, just remember that the variable names are your choice.
 
+If you just need to refresh your memory, navigate to the *Cheatsheet* header in the table of contents.
+
 #### Prerequisites
 - HTML Elements, Variables, Strings, Objects
-
-# Create an HTML Element
-- `document.createElement(placeholder);{:js}`
-- replace `placeholder{:js}` with an HTML tag as a string, such as `'div'{:js}`, `'img'{:js}`, or `'section'{:js}`
-
-### Examples
-The code below creates a new `<div>{:html}` element and stores it in a variable named `newElement{:js}`. The element is not on the page yet.
-```js title="script.js"
-const newElement = document.createElement('div');
-```
----
-The code below creates a new `<p>{:html}` element and stores it in a variable named `newParagraph{:js}`. The element is not on the page yet.
-```js title="script.js"
-const newParagraph = document.createElement('p');
-```
 
 # Select an HTML element
 - `document.getElementById(placeholder);{:js}`
@@ -77,13 +64,34 @@ After either of the above JavaScript code examples run, the HTML will be updated
 </body>
 ```
 
+# Remove a Class from an HTML Element
+
+# Create an HTML Element
+- `document.createElement(placeholder);{:js}`
+- replace `placeholder{:js}` with an HTML tag as a string, such as `'div'{:js}`, `'img'{:js}`, or `'section'{:js}`
+
+### Examples
+The code below creates a new `<div>{:html}` element and stores it in a variable named `newElement{:js}`. The element is not on the page yet.
+```js title="script.js"
+const newElement = document.createElement('div');
+```
+---
+The code below creates a new `<p>{:html}` element and stores it in a variable named `newParagraph{:js}`. The element is not on the page yet.
+```js title="script.js"
+const newParagraph = document.createElement('p');
+```
+
+# Add an Element to the Page
+
+# Remove an Element from the Page
+
 # Cheatsheet
 |Goal | Method |
 | --- | ----- |
-| Create | `document.createElement('div');{:js}` |
 | Select | `document.getElementById('your-element-id');{:js}` |
 | Add a class | `yourHtmlElement.classList.add('your-class');{:js}` |
 | Remove a class | `yourHtmlElement.classList.remove('your-class');{:js}` |
+| Create | `document.createElement('div');{:js}` |
 | Add to the page | `yourParentElement.appendChild(yourHtmlElement);{:js}` |
 | Remove from the page | `yourParentElement.removeChild(yourHtmlElement);{:js}` |
 | Adjust the inner HTML | `yourHtmlElement.innerHTML = 'Your new text';{:js}` |
