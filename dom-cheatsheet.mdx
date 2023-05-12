@@ -22,17 +22,15 @@ The code below creates a new `<div>{:html}` element and stores it in a variable 
 ```js title="script.js"
 const newElement = document.createElement('div');
 ```
-
+---
 The code below creates a new `<p>{:html}` element and stores it in a variable named `newParagraph{:js}`. The element is not on the page yet.
 ```js title="script.js"
 const newParagraph = document.createElement('p');
 ```
 
 # Select an HTML element
-- code
-  - `document.getElementById(placeholder);{:js}`
-- placeholder
-  - replace with a string that matches the id of the element you want to select, such as `'about'{:js}` or `'menu-item'{:js}`
+- `document.getElementById(placeholder);{:js}`
+- replace placeholder with a string that matches the id of the element you want to select, such as `'about'{:js}` or `'menu-item'{:js}`
 
 ### Examples
 The code below is part of the HTML file.
@@ -50,7 +48,7 @@ const about = document.getElementById('about-section');
 # Add a Class to an HTML Element
 - `placeholder1.classList.add(placeholder2){:js}`
 - replace `placeholder1{:js}` with your HTML element. This can be a variable storing the element or the entire expression (see creating or selecting and element above).
-
+- replace `placeholder2{:js}` with the class you want to add as a string, such as `'card'{:js}` or `'serif-header'{:js}`
 ### Examples
 The code below is in the HTML file.
 ```html title="index.html" {2}
@@ -72,7 +70,7 @@ Alternatively, you can do this without a variable.
 document.getElementById('greeting').classList.add('serif-header');
 ```
 After either of the above JavaScript code examples run, the HTML will be updated.
-```html title="index.html"
+```html title="index.html" {2}
 <body>
   <h1 id="greeting" class="serif-header">Hello</h1>
   <div id="home"></div>
