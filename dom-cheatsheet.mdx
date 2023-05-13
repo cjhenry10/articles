@@ -4,16 +4,25 @@ subtitle: 'Some examples of how to use the Document Object Model'
 date: '2023-05-10'
 tags: ['javascript', 'DOM']
 ---
-### Introduction
+# Introduction
 The DOM, or Document Object Model, provides methods to add, change, and remove HTML elements using JavaScript.
+#### Prerequisites
+- HTML Elements, Variables, Strings, Objects
 
 Each section will first show the code with the word placeholder, followed by examples of what can replace the placeholder. 
 Next, there will be examples of how to use this method. This will usually involve using a variable, just remember that the variable names are your choice.
 
-If you just need to refresh your memory, navigate to the *Cheatsheet* header in the table of contents.
-
-#### Prerequisites
-- HTML Elements, Variables, Strings, Objects
+Here's a table of the methods detailed in this article.
+#### Cheatsheet
+|Goal | Method |
+| --- | ----- |
+| Select | `document.getElementById('your-element-id');{:js}` |
+| Add a class | `yourHtmlElement.classList.add('your-class');{:js}` |
+| Remove a class | `yourHtmlElement.classList.remove('your-class');{:js}` |
+| Create | `document.createElement('div');{:js}` |
+| Add to the page | `yourParentElement.appendChild(yourHtmlElement);{:js}` |
+| Remove from the page | `yourParentElement.removeChild(yourHtmlElement);{:js}` |
+| Adjust the inner HTML | `yourHtmlElement.innerHTML = 'Your new text';{:js}` |
 
 # Select an HTML element
 - `document.getElementById(placeholder);{:js}`
@@ -21,7 +30,7 @@ If you just need to refresh your memory, navigate to the *Cheatsheet* header in 
 
 ### Examples
 The code below is part of the HTML file.
-```html title="index.html" {3}
+```html title="index.html" {3} showLineNumbers{4}
 <body>
   <h1>Hello</h1>
   <div id="about-section"></div>
@@ -31,7 +40,7 @@ The code below selects this `div` element and stores it in a variable named `abo
 ```js title="script.js"
 const about = document.getElementById('about-section');
 ```
-
+---
 # Add a Class to an HTML Element
 - `placeholder1.classList.add(placeholder2){:js}`
 - replace `placeholder1{:js}` with your HTML element. This can be a variable storing the element or the entire expression (see creating or selecting and element above).
@@ -63,9 +72,9 @@ After either of the above JavaScript code examples run, the HTML will be updated
   <div id="home"></div>
 </body>
 ```
-
+---
 # Remove a Class from an HTML Element
-
+---
 # Create an HTML Element
 - `document.createElement(placeholder);{:js}`
 - replace `placeholder{:js}` with an HTML tag as a string, such as `'div'{:js}`, `'img'{:js}`, or `'section'{:js}`
@@ -75,23 +84,13 @@ The code below creates a new `<div>{:html}` element and stores it in a variable 
 ```js title="script.js"
 const newElement = document.createElement('div');
 ```
----
+
 The code below creates a new `<p>{:html}` element and stores it in a variable named `newParagraph{:js}`. The element is not on the page yet.
 ```js title="script.js"
 const newParagraph = document.createElement('p');
 ```
-
+---
 # Add an Element to the Page
-
+---
 # Remove an Element from the Page
-
-# Cheatsheet
-|Goal | Method |
-| --- | ----- |
-| Select | `document.getElementById('your-element-id');{:js}` |
-| Add a class | `yourHtmlElement.classList.add('your-class');{:js}` |
-| Remove a class | `yourHtmlElement.classList.remove('your-class');{:js}` |
-| Create | `document.createElement('div');{:js}` |
-| Add to the page | `yourParentElement.appendChild(yourHtmlElement);{:js}` |
-| Remove from the page | `yourParentElement.removeChild(yourHtmlElement);{:js}` |
-| Adjust the inner HTML | `yourHtmlElement.innerHTML = 'Your new text';{:js}` |
+---
