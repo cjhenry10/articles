@@ -26,7 +26,7 @@ Here's a table of the methods detailed in this article.
 
 # Select an HTML element
 - `document.getElementById(placeholder);{:js}`
-- replace placeholder with a string that matches the id of the element you want to select, such as `'about'{:js}` or `'menu-item'{:js}`
+- replace `placeholder{:js}` with a string that matches the id of the element you want to select, such as `'about'{:js}` or `'menu-item'{:js}`
 
 ### Examples
 The code below is part of the HTML file.
@@ -36,15 +36,15 @@ The code below is part of the HTML file.
   <div id="about-section"></div>
 </body>
 ```
-The code below selects this `<div>{:html}` element and stores it in a variable named `about{:js}`.
+The code below selects the `<div>{:html}` element on line 6 using its id `'about-section'{:js}` and stores it in a variable named `about{:.entity.name.variable}`.
 ```js title="script.js"
 const about = document.getElementById('about-section');
 ```
 ---
 # Add a Class to an HTML Element
 - `placeholder1.classList.add(placeholder2){:js}`
-- replace `placeholder1{:js}` with your HTML element. This can be a variable storing the element or the entire expression (see creating or selecting and element above).
-- replace `placeholder2{:js}` with the class you want to add as a string, such as `'card'{:js}` or `'serif-header'{:js}`
+- replace `placeholder1{:.entity.name.variable}` with your HTML element. This can be a variable storing the element or the entire expression (see creating or selecting and element above).
+- replace `placeholder2{:.entity.name.variable}` with the class you want to add as a string, such as `'card'{:js}` or `'serif-header'{:js}`
 ### Examples
 The code below is in the HTML file.
 ```html title="index.html" {2}
@@ -77,20 +77,22 @@ After either of the above JavaScript code examples run, the HTML will be updated
 ---
 # Create an HTML Element
 - `document.createElement(placeholder);{:js}`
-- replace `placeholder{:js}` with an HTML tag as a string, such as `'div'{:js}`, `'img'{:js}`, or `'section'{:js}`
+- replace `placeholder{:.entity.name.variable}` with an HTML tag as a string, such as `'div'{:js}`, `'img'{:js}`, or `'section'{:js}`
 
 ### Examples
-The code below creates a new `<div>{:html}` element and stores it in a variable named `newElement{:js}`. The element is not on the page yet.
+The code below creates a new `<div>{:html}` element and stores it in a variable named `newElement{:.entity.name.variable}`. The element is not on the page yet.
 ```js title="script.js"
 const newElement = document.createElement('div');
 ```
 
-The code below creates a new `<p>{:html}` element and stores it in a variable named `newParagraph{:js}`. The element is not on the page yet.
+The code below creates a new `<p>{:html}` element and stores it in a variable named `newParagraph{:.entity.name.variable}`. The element is not on the page yet.
 ```js title="script.js"
 const newParagraph = document.createElement('p');
 ```
 ---
 # Add an Element to the Page
+-`placeholder1.appendChild(placeholder2){:js}`
+-
 ---
 # Remove an Element from the Page
 ---
