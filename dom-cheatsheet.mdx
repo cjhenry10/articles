@@ -26,7 +26,7 @@ Here's a table of the methods detailed in this article.
 
 # Select an HTML element
 - `document.getElementById(placeholder);{:js}`
-- replace `placeholder{:js}` with a string that matches the id of the element you want to select, such as `'about'{:js}` or `'menu-item'{:js}`
+- Replace `placeholder{:js}` with a string that matches the id of the element you want to select, such as `'about'{:js}` or `'menu-item'{:js}`.
 
 ### Examples
 The code below is part of the HTML file.
@@ -43,8 +43,8 @@ const about = document.getElementById('about-section');
 ---
 # Add a Class to an HTML Element
 - `placeholder1.classList.add(placeholder2){:js}`
-- replace `placeholder1{:.entity.name.variable}` with your HTML element. This can be a variable storing the element or the entire expression (see creating or selecting and element above).
-- replace `placeholder2{:.entity.name.variable}` with the class you want to add as a string, such as `'card'{:js}` or `'serif-header'{:js}`
+- Replace `placeholder1{:.entity.name.variable}` with your HTML element.
+- Replace `placeholder2{:js}` with the class you want to add as a string, such as `'card'{:js}` or `'serif-header'{:js}`.
 ### Examples
 The code below is in the HTML file.
 ```html title="index.html" {2}
@@ -65,7 +65,7 @@ Alternatively, you can do this without a variable.
 //    select the element             add a class
 document.getElementById('greeting').classList.add('serif-header');
 ```
-After either of the above JavaScript code examples run, the HTML will be updated.
+After either of the above JavaScript code examples run, the HTML in the browser will be updated. This will not change the HTML code you wrote in your code editor.
 ```html title="index.html" {2}
 <body>
   <h1 id="greeting" class="serif-header">Hello</h1>
@@ -74,6 +74,36 @@ After either of the above JavaScript code examples run, the HTML will be updated
 ```
 ---
 # Remove a Class from an HTML Element
+- `placeholder1.classList.remove(placeholder2){:js}`
+- Replace `placeholder1{:.entity.name.variable}` with your HTML element.
+- Replace `placeholder2{:.js}` with the class you want to remove as a string, such as `'card'{:js}` or `'serif-header'{:js}`.
+### Examples
+The code below is in the HTML file.
+```html title="index.html" {2}
+<body>
+  <h1 id="greeting" class="serif-header">Hello</h1>
+  <div id="home"></div>
+</body>
+```
+To remove the `'serif-header'{:js}` class from the `<h1>{:html}` on line 2, use the code below.
+```js title="script.js"
+// select the h1 by it's id
+const h1Element = document.getElementById('greeting');
+// remove a class from the h1
+h1Element.classList.remove('serif-header')
+```
+Alternatively, you can do this without a variable.
+```js title="script.js"
+//    select the element             remove a class
+document.getElementById('greeting').classList.remove('serif-header');
+```
+After either of the above JavaScript code examples run, the HTML in the browser will be updated. This will not change the HTML code you wrote in your code editor.
+```html title="index.html" {2}
+<body>
+  <h1 id="greeting">Hello</h1>
+  <div id="home"></div>
+</body>
+```
 ---
 # Create an HTML Element
 - `document.createElement(placeholder);{:js}`
