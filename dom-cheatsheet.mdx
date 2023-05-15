@@ -13,7 +13,6 @@ Each section will first show the code with the word placeholder, followed by exa
 Next, there will be examples of how to use this method. This will usually involve using a variable, just remember that the variable names are your choice.
 
 Here's a table of the methods detailed in this article.
-#### Cheatsheet
 |Goal | Method |
 | --- | ----- |
 | Select | `document.getElementById('your-element-id');{:js}` |
@@ -36,7 +35,7 @@ The code below is part of the HTML file.
   <div id="about-section"></div>
 </body>
 ```
-The code below selects the `<div>{:html}` element on line 6 using its id `'about-section'{:js}` and stores it in a variable named `about{:.entity.name.variable}`.
+The code below selects the `<div>{:html}` element on line 6 using its id `'about-section'{:js}` and stores it in a variable named `about{:js}`.
 ```js title="script.js"
 const about = document.getElementById('about-section');
 ```
@@ -76,7 +75,7 @@ After either of the above JavaScript code examples run, the HTML in the browser 
 # Remove a Class from an HTML Element
 - `placeholder1.classList.remove(placeholder2){:js}`
 - Replace `placeholder1{:js}` with your HTML element.
-- Replace `placeholder2{:.js}` with the class you want to remove as a string, such as `'card'{:js}` or `'serif-header'{:js}`.
+- Replace `placeholder2{:js}` with the class you want to remove as a string, such as `'card'{:js}` or `'serif-header'{:js}`.
 ### Examples
 The code below is in the HTML file.
 ```html title="index.html" {2}
@@ -107,7 +106,7 @@ After either of the above JavaScript code examples run, the HTML in the browser 
 ---
 # Create an HTML Element
 - `document.createElement(placeholder);{:js}`
-- replace `placeholder{:.entity.name.variable}` with an HTML tag as a string, such as `'div'{:js}`, `'img'{:js}`, or `'section'{:js}`
+- replace `placeholder{:js}` with an HTML tag as a string, such as `'div'{:js}`, `'img'{:js}`, or `'section'{:js}`
 
 ### Examples
 The code below creates a new `<div>{:html}` element and stores it in a variable named `newElement{:js}`. The element is not on the page yet.
