@@ -1,0 +1,88 @@
+---
+title: 'AWS Well-Architected Framework'
+subtitle: 'The six pillars of the AWS Well-Architected Framework along with some best practices'
+date: '2023-05-24'
+tags: ['aws']
+---
+The AWS Well-Architected Framework has six pillars: 
+- Operational Excellence ⚙
+- Security 🔒
+- Reliability 🔗
+- Performance Efficiency 🏁
+- Cost Optimization 💵
+- Sustainability ♻
+
+Use the AWS Well-Architected Tool to help review compliance with these pillars.
+
+# Operational Excellence
+The operational excellence pillar focuses on the ability to run and monitor systems while gaining insight into their operations to deliver business value. These processes should have the ability to continuously improve.
+
+To implement the operational excellence pillar: 
+- follow general engineering practices that allow for a reduction in defects and enable quick and safe fixes
+- use logging and other metrics to observe what is happening within your workload
+
+It can help to view the entire workload as code. The same principles that would be followed in application code can be applied to all parts of the stack.
+
+# Security
+The security pillar focuses on protecting information and systems.
+
+To implement the security pillar: 
+- have a strong identity foundation
+- enable traceability
+- secure all layers
+- apply risk assessment and mitigation
+
+# Reliability
+The reliability pillar focuses on quick recovery from disruptions, as well as a system's ability to mitigate these disruptions. This pillar also handles the acquisition of resources to meet demand.
+
+To implement the reliability pillar:
+- have a plan to restore resources in the event of an outage
+- prepare for scaling when demand is high
+- mitigate disruptions
+
+# Performance Efficiency
+The performance efficiency pillar focuses on using resources efficiently and effectively, as well as using your own, or your team's, time effectively.
+
+To implement the performance efficiency pillar:
+- choose efficient resources for the workload and maintain this efficiency as demand changes
+- consider using a vendor for difficult technologies to free up time for your team for other endeavors (democratize advanced technologies)
+- understand how each tool operates best to align that tool with what you are trying to achieve (mechanical sympathy)
+
+# Cost Optimization
+The cost optimization pillar focuses on using resources efficiently and minimizing unneeded expenses. 
+
+To implement the cost optimization pillar:
+- understand pricing models of services
+- optimize infrastructure
+
+# Sustainability
+The sustainability pillar focuses on maximizing efficiency and reducing waste.
+
+To implement the sustainability pillar:
+- understand your impact
+- have sustainability goals
+- maximize resource utilization
+- implement new, more efficient technologies
+---
+# Best Practices
+- Enable scalability
+  - Use Auto Scaling instead of manually adding servers when needed
+- Automate your environment
+  - Use CloudWatch or Auto Scaling to automatically replace unhealthy resources
+- Treat resources as disposable
+  - Think software instead of hardware
+  - Resources can be changed and adjusted as needed
+- Use loosely coupled components
+  - Use things like load balancers and message queues between different types of servers
+- Design services, not servers
+  - Use containers/serverless options when appropriate
+- Choose the right database
+- Avoid single points of failure
+  - Have a standby database server if the primary instance goes down
+- Optimize for cost
+- Use caching
+  - Amazon CloudFront helps reduce cost and latency
+- Secure the infrastructure
+  - isolate different parts of the infrastructure
+  - encrypt data
+  - use multi-factor authentication
